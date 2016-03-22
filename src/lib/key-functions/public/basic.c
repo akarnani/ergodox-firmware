@@ -255,7 +255,7 @@ void kbfun_layer_toggle_1(void) {
  *   See the description of kbfun_layer_push_1()
  */
 void kbfun_layer_push_2(void) {
-	keyboard_leds = keyboard_leds | 0x02;
+	keyboard_leds = keyboard_leds | 0x04;
 	layer_push(2);
 }
 
@@ -278,7 +278,7 @@ void kbfun_layer_sticky_2  (void) {
  *   See the description of kbfun_layer_pop_1()
  */
 void kbfun_layer_pop_2(void) {
-	keyboard_leds = keyboard_leds & ~(uint8_t)0x02;
+	keyboard_leds = keyboard_leds & ~(uint8_t)0x04;
 	layer_pop(2);
 }
 
@@ -301,7 +301,6 @@ void kbfun_layer_toggle_2(void) {
  *   See the description of kbfun_layer_push_1()
  */
 void kbfun_layer_push_3(void) {
-	keyboard_leds = keyboard_leds | 0x01 | 0x02;
 	layer_push(3);
 }
 
@@ -324,7 +323,6 @@ void kbfun_layer_sticky_3  (void) {
  *   See the description of kbfun_layer_pop_1()
  */
 void kbfun_layer_pop_3(void) {
-	keyboard_leds = keyboard_leds & ~(uint8_t)0x01 & ~(uint8_t)0x02;
 	layer_pop(3);
 }
 
